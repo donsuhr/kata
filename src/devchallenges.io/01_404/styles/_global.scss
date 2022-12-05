@@ -1,0 +1,25 @@
+$mobile-breakpoint: 600px;
+$tablet-breakpoint: 821px;
+
+:root {
+  --gray01: #333;
+  --gray02: #4f4f4f;
+  --gray03: #bdbdbd;
+  --gray03a11y: #757575;
+  --white: #fff;
+  --bodyFont: 'Space Mono', monospace;
+  --titleFont: inconsolata, monospace;
+  --footerFont: montserrat, monospace;
+  --maxWidth: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: var(--bodyFont);
+}
