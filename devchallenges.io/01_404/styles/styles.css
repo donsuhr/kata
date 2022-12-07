@@ -43,7 +43,6 @@ main {
 
 .page__footer {
   display: flex;
-  grid-area: footer;
   min-height: 3em; }
 
 .footer__created-by {
