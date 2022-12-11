@@ -1,0 +1,121 @@
+.crew {
+  max-width: var(--maxWidth);
+  margin: auto;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 21px;
+
+  @media (min-width: $mobile-breakpoint) {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+.crew__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 36px;
+  font-family: var(--titleFont);
+  line-height: 48px;
+  letter-spacing: -0.045em;
+}
+
+.crew__subtitle {
+  margin: 0 0 10px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  text-transform: uppercase;
+}
+
+.crew__header {
+  display: grid;
+  gap: 38px;
+  margin: 0 0 60px;
+
+  p {
+    margin: 0;
+  }
+
+  @media (min-width: $mobile-breakpoint) {
+    grid-template-columns: 1fr 1fr;
+    margin: 0 0 96px;
+  }
+}
+
+.crew__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 0 96px;
+  padding: 0;
+  column-gap: 27px;
+  list-style-type: none;
+  row-gap: 10px;
+
+  > * {
+    position: relative;
+  }
+
+  > *:nth-child(2n) {
+    margin-top: 90px;
+  }
+
+  @media (min-width: $mobile-breakpoint) {
+    grid-template-columns: 1fr 1fr 1fr;
+
+    > *:nth-child(2n) {
+      margin-top: 0;
+    }
+
+    > *:nth-child(3n + 2) {
+      margin-top: 90px;
+    }
+  }
+
+  @media (min-width: $tablet-breakpoint) {
+    gap: 64px;
+  }
+}
+
+.crew-list-item__name {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+
+  @media (min-width: $mobile-breakpoint) {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+.crew-list-item__title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  font-weight: 400;
+  font-size: 10px;
+  font-family: var(--titleFont);
+  line-height: 13px;
+  text-transform: uppercase;
+  transform: translate(100%) rotate(90deg);
+  transform-origin: top left;
+
+  @media (min-width: $mobile-breakpoint) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.crew-list-item__img {
+  display: block;
+  width: 100%;
+  margin: 0 0 4px;
+  padding-right: 16px;
+
+  @media (min-width: $mobile-breakpoint) {
+    margin: 0 0 10px;
+    padding-right: 21px;
+  }
+}

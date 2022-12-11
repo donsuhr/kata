@@ -6,7 +6,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://donsuhr.github.io/kata/devchallenges.io/01_404/">
+    <a href="../">
       Demo
     </a>
     <span> | </span>
@@ -26,7 +26,7 @@
 
 ![mobile web screenshot](https://raw.githubusercontent.com/donsuhr/kata/main/src/devchallenges.io/01_404/img/screenshot-devchallenges.io_01_404-MW.png)
 
-![stationary web screenshot](https://raw.githubusercontent.com/donsuhr/kata/main/src/devchallenges.io/01_404/img/screenshot-devchallenges.io_01_404-MW.png)
+![stationary web screenshot](https://raw.githubusercontent.com/donsuhr/kata/main/src/devchallenges.io/01_404/img/screenshot-devchallenges.io_01_404-SW.png)
 
 ## Built With
 

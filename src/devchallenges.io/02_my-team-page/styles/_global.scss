@@ -1,0 +1,24 @@
+$mobile-breakpoint: 600px;
+$tablet-breakpoint: 821px;
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --gray03a11y: #757575;
+  --bodyFont: 'Poppins', sans-serif;
+  --titleFont: 'PT Serif', monospace;
+  --footerFont: montserrat, monospace;
+  --maxWidth: 800px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  color: var(--black);
+  font-family: var(--bodyFont);
+}
