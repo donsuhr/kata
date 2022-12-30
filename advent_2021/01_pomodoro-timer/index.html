@@ -1,0 +1,10 @@
+<!doctype html><html lang=en><head><title>Pomodoro Timer</title><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content=noindex,nofollow><link rel=stylesheet href=./styles/index.css><style>/* safari is the new ie */
+      /* this code blows up the linter / sass compiler */
+      @media not all and (min-resolution: 0.001dpcm) {
+        @media {
+          .timer__input,
+          .timer__start-button {
+            color: #FFF;
+          }
+        }
+      }</style></head><body><section class=timer data-state=stopped><svg class=progressbar__svg viewBox="0 0 32 32"><title>50%</title><circle cx=50% cy=50% r=49.85% class=progressbar__circle /></svg><form class=timer__controls><div class=timer__input-wrapper><input type=number class="timer__input timer__input--minutes" placeholder=00 value=00 min=0 max=99 maxlength=2 pattern=[0-9]* readonly=readonly>:<input type=number class="timer__input timer__input--seconds" placeholder=00 min=0 max=59 value=03 maxlength=2 pattern=[0-9]* readonly=readonly></div><button type=button class=timer__start-button>Start</button> <button type=button class=timer__config-button><img src=./images/gear.svg alt=configure></button></form></section><script src=./scripts/index.js type=module></script></body></html>
