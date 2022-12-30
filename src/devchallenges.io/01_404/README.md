@@ -1,4 +1,4 @@
-<h1 align="center">Page Not Found</h1>
+<h1 align="center">Page Not Found Challenge</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -6,12 +6,12 @@
 
 <div align="center">
   <h3>
-    <a href="../">
-      Demo
+    <a href="https://donsuhr.github.io/kata/devchallenges.io/01_404/">
+      Solution Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/donsuhr/kata/tree/main/src/devchallenges.io/01_404">
-      Solution
+    <a href="https://github.com/donsuhr/kata/tree/main/src/devchallenges.io/01_404/">
+      Code
     </a>
     <span> | </span>
     <a href="https://devchallenges.io/challenges/wBunSb7FPrIepJZAg0sY">
@@ -19,8 +19,6 @@
     </a>
   </h3>
 </div>
-
-<!-- OVERVIEW -->
 
 ## Overview
 

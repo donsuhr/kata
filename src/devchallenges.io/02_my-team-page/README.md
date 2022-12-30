@@ -1,4 +1,4 @@
-<h1 align="center">My Team Page</h1>
+<h1 align="center">My Team Page Challenge</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -6,12 +6,12 @@
 
 <div align="center">
   <h3>
-    <a href="../">
-      Demo
+    <a href="https://donsuhr.github.io/kata/devchallenges.io/02_my-team-page/">
+      Solution Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/donsuhr/kata/tree/main/src/devchallenges.io/02_my-team-page">
-      Solution
+    <a href="https://github.com/donsuhr/kata/tree/main/src/devchallenges.io/02_my-team-page/">
+      Code
     </a>
     <span> | </span>
     <a href="https://devchallenges.io/challenges/hhmesazsqgKXrTkYkt0U">
@@ -25,12 +25,14 @@
 <figure>
 
 ![mobile web screenshot](https://raw.githubusercontent.com/donsuhr/kata/main/src/devchallenges.io/02_my-team-page/img/localhost_8080_devchallenges.io_02_my-team-page_MW.png)
+
 <figcaption>Mobile Screenshot</figcaption>
 </figure>
 
 <figure>
 
 ![stationary web screenshot](https://raw.githubusercontent.com/donsuhr/kata/main/src/devchallenges.io/02_my-team-page/img/localhost_8080_devchallenges.io_02_my-team-page_SW.png)
+
 <figcaption>Stationary Web Screenshot</figcaption>
 </figure>
 
