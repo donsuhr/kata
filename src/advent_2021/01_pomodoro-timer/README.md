@@ -10,7 +10,7 @@
       Solution Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/donsuhr/kata/tree/main/src/advent_2021/01_pomodo-timer/">
+    <a href="https://github.com/donsuhr/kata/tree/main/src/advent_2021/01_pomodoro-timer">
       Code
     </a>
     <span>
@@ -21,7 +21,7 @@
 
 <figure>
 
-![mobile web screenshot](https://raw.githubusercontent.com/donsuhr/kata/main/src/advent_2021/O1_pomodoro-timer/images/screenShot.png)
+![mobile web screenshot](https://raw.githubusercontent.com/donsuhr/kata/main/src/advent_2021/01_pomodoro-timer/images/screenShot.png)
 
 <figcaption>Screenshot</figcaption>
 </figure>

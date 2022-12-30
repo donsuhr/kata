@@ -10,7 +10,7 @@
       Solution Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/donsuhr/kata/tree/main/src/devchallenges.io/02_my-team-page/">
+    <a href="https://github.com/donsuhr/kata/tree/main/src/devchallenges.io/02_my-team-page">
       Code
     </a>
     <span> | </span>
