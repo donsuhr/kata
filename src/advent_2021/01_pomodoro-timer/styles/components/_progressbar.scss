@@ -1,0 +1,30 @@
+:root {
+  --dataStrokeOffset: 0;
+}
+
+.progressbar__svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  transform: rotate(-90deg) scaleY(-1);
+  pointer-events: none;
+}
+
+.progressbar__circle {
+  transition: stroke-dashoffset 250ms linear;
+  fill: none;
+  stroke: var(--red);
+  stroke-width: 0.5;
+  stroke-dasharray: 100;
+  stroke-dashoffset: var(--dataStrokeOffset);
+  stroke-linecap: round;
+
+  [data-state='editing'] &,
+  [data-state='stopped'] & {
+    filter: none;
+    transition: stroke-dashoffset 1ms linear;
+    stroke: var(--green);
+    stroke-dashoffset: var(--dataStrokeOffset);
+  }
+}

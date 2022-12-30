@@ -1,0 +1,35 @@
+@import 'components/index';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
+
+:root {
+  --backgroundColor: #2b2a30;
+  --red: #9d0000;
+  --green: #00aa51;
+  --black: #000;
+  --white: #fff;
+  --transparent: transparent;
+  --timerFont: 'Bebas Neue Book';
+  --buttonFont: 'Montserrat';
+  --buttonColor: transparent;
+}
+
+@font-face {
+  font-family: 'Bebas Neue Book';
+  src:
+    url('../fonts/bebasneue-book-webfont.woff2') format('woff2'),
+    url('../fonts/bebasneue-book-webfont.woff') format('woff');
+}
+
+body {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  place-items: center;
+  background-color: var(--backgroundColor);
+}
+
+* {
+  box-sizing: border-box;
+}
