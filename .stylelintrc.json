@@ -2,6 +2,7 @@
   "extends": [
     "stylelint-config-standard",
     "stylelint-config-standard-scss",
+    "stylelint-config-prettier-scss",
     "stylelint-config-rational-order"
   ],
   "plugins": ["stylelint-declaration-strict-value"],
@@ -14,7 +15,6 @@
         "ignoreAtRules": ["else"]
       }
     ],
-    "at-rule-name-space-after": "always",
     "at-rule-no-unknown": [
       true,
       {
@@ -34,12 +34,6 @@
       }
     ],
     "at-rule-no-vendor-prefix": true,
-    "block-closing-brace-newline-after": [
-      "always",
-      {
-        "ignoreAtRules": ["else", "if"]
-      }
-    ],
     "color-named": "never",
     "custom-property-pattern": "^[a-zA-Z0-9]+$",
     "declaration-block-no-redundant-longhand-properties": true,
@@ -50,7 +44,6 @@
     "function-url-no-scheme-relative": true,
     "function-url-quotes": "always",
     "import-notation": null,
-    "indentation": 2,
     "max-nesting-depth": 4,
     "media-feature-name-no-vendor-prefix": true,
     "property-no-vendor-prefix": true,
@@ -67,8 +60,8 @@
     "scss/at-function-pattern": "^[a-z0-9\\-_]+$",
     "scss/at-if-closing-brace-newline-after": "always-last-in-chain",
     "scss/at-if-closing-brace-space-after": "always-intermediate",
-    "scss/at-import-no-partial-leading-underscore": true,
-    "scss/at-import-partial-extension-blacklist": ["scss"],
+    "scss/load-no-partial-leading-underscore": true,
+    "scss/at-import-partial-extension-disallowed-list": ["scss"],
     "scss/at-mixin-pattern": "^[a-z0-9\\-_]+$",
     "scss/dollar-variable-colon-space-after": "always-single-line",
     "scss/dollar-variable-colon-space-before": "never",
@@ -93,17 +86,17 @@
       { "disableFix": true }
     ],
     "shorthand-property-no-redundant-values": true,
-    "string-quotes": "single",
     "unit-allowed-list": [
       "%",
       "ch",
       "deg",
       "em",
+      "fr",
+      "lh",
       "ms",
       "px",
       "rem",
       "s",
-      "fr",
       "vh",
       "vw"
     ],

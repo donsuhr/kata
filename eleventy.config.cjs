@@ -1,13 +1,6 @@
 const { minify } = require('html-minifier-terser');
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.setBrowserSyncConfig({
-    // directory: true,
-    // index: 'index.html',
-    files: '_site',
-    // logLevel: 'debug',
-  });
-
   eleventyConfig.addTransform('htmlmin', async (content, outputPath) => {
     if (process.env.NODE_ENV === 'production') {
       if (outputPath.endsWith('.html')) {
@@ -22,4 +15,11 @@ module.exports = function (eleventyConfig) {
 
     return content;
   });
+
+  return {
+    dir: {
+      input: 'src',
+      output: 'dist/kata',
+    },
+  };
 };
