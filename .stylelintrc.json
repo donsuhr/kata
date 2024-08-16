@@ -3,7 +3,7 @@
     "stylelint-config-standard",
     "stylelint-config-standard-scss",
     "stylelint-config-prettier-scss",
-    "stylelint-config-rational-order"
+    "stylelint-config-clean-order"
   ],
   "plugins": ["stylelint-declaration-strict-value"],
   "rules": {

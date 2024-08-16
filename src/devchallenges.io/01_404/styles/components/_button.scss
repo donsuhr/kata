@@ -1,13 +1,15 @@
 .button {
   padding: 24px 43px;
-  color: var(--white);
-  font-weight: 700;
+
   font-size: 14px;
+  font-weight: 700;
   font-style: normal;
   line-height: 21px;
-  letter-spacing: -0.035em;
-  text-transform: uppercase;
+  color: var(--white);
   text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: -0.035em;
+
   background: var(--gray02);
 
   @at-root a#{&} {

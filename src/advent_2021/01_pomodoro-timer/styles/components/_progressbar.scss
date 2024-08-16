@@ -3,28 +3,32 @@
 }
 
 .progressbar__svg {
+  pointer-events: none;
+
   position: absolute;
+  transform: rotate(-90deg) scaleY(-1);
+
+  overflow: visible;
+
   width: 100%;
   height: 100%;
-  overflow: visible;
-  transform: rotate(-90deg) scaleY(-1);
-  pointer-events: none;
 }
 
 .progressbar__circle {
-  transition: stroke-dashoffset 250ms linear;
   fill: none;
   stroke: var(--red);
-  stroke-width: 0.5;
   stroke-dasharray: 100;
   stroke-dashoffset: var(--dataStrokeOffset);
   stroke-linecap: round;
+  stroke-width: 0.5;
+
+  transition: stroke-dashoffset 250ms linear;
 
   [data-state='editing'] &,
   [data-state='stopped'] & {
     filter: none;
-    transition: stroke-dashoffset 1ms linear;
     stroke: var(--green);
     stroke-dashoffset: var(--dataStrokeOffset);
+    transition: stroke-dashoffset 1ms linear;
   }
 }

@@ -2,6 +2,7 @@
   max-width: var(--maxWidth);
   margin: auto;
   padding: 20px;
+
   font-size: 14px;
   line-height: 21px;
 
@@ -13,17 +14,19 @@
 
 .crew__title {
   margin: 0;
-  font-weight: 700;
-  font-size: 36px;
+
   font-family: var(--titleFont);
+  font-size: 36px;
+  font-weight: 700;
   line-height: 48px;
   letter-spacing: -0.045em;
 }
 
 .crew__subtitle {
   margin: 0 0 10px;
-  font-weight: 600;
+
   font-size: 18px;
+  font-weight: 600;
   line-height: 27px;
   text-transform: uppercase;
 }
@@ -46,11 +49,12 @@
 .crew__list {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 10px 27px;
+
   margin: 0 0 96px;
   padding: 0;
-  column-gap: 27px;
+
   list-style-type: none;
-  row-gap: 10px;
 
   > * {
     position: relative;
@@ -79,8 +83,8 @@
 
 .crew-list-item__name {
   margin: 0;
-  font-weight: 600;
   font-size: 14px;
+  font-weight: 600;
   line-height: 21px;
 
   @media (min-width: $mobile-breakpoint) {
@@ -93,14 +97,16 @@
   position: absolute;
   top: 0;
   right: 0;
+  transform-origin: top left;
+  transform: translate(100%) rotate(90deg);
+
   margin: 0;
-  font-weight: 400;
-  font-size: 10px;
+
   font-family: var(--titleFont);
+  font-size: 10px;
+  font-weight: 400;
   line-height: 13px;
   text-transform: uppercase;
-  transform: translate(100%) rotate(90deg);
-  transform-origin: top left;
 
   @media (min-width: $mobile-breakpoint) {
     font-size: 12px;

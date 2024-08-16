@@ -16,6 +16,11 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
+  eleventyConfig.setServerOptions({
+    domDiff: false,
+    watch: ['dist/**/*.css', 'dist/**/*.js'],
+  });
+
   return {
     dir: {
       input: 'src',
