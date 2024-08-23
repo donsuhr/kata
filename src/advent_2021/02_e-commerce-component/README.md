@@ -21,7 +21,7 @@
 
 <figure>
 
-![mobile web screenshot](https://raw.githubusercontent.com/donsuhr/kata/main/src/advent_2021/02_e-commerce-component/images/screenShot.png)
+![mobile web screenshot](https://raw.githubusercontent.com/donsuhr/kata/main/src/advent_2021/02_e-commerce-component/images/screenshot.png)
 
 <figcaption>Screenshot</figcaption>
 </figure>
