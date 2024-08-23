@@ -8,3 +8,4 @@
 ## [advent_2021](https://www.adventofcss.com/)
 
 - [01_pomodoro](https://donsuhr.github.io/kata/advent_2021/01_pomodoro-timer/README/)
+- [02_e-commerce-component](https://donsuhr.github.io/kata/advent_2021/02_e-commerce-component/README/)
