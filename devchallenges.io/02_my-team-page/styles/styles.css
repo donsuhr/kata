@@ -14,26 +14,26 @@ body,
 html {
   margin: 0;
   padding: 0;
-  color: var(--black);
-  font-family: var(--bodyFont); }
+  font-family: var(--bodyFont);
+  color: var(--black); }
 
 .page__footer {
   font-family: var(--footerFont); }
 
 .footer__created-by {
-  color: var(--gray03a11y);
-  font-weight: 500;
   font-size: 14px;
+  font-weight: 500;
   font-style: normal;
   line-height: 17px;
+  color: var(--gray03a11y);
   text-align: center; }
   .footer__created-by a:link, .footer__created-by a:visited, .footer__created-by a:active {
-    color: var(--gray03a11y);
     font-weight: 700;
+    color: var(--gray03a11y);
     text-decoration: none; }
   .footer__created-by a:hover {
-    color: var(--gray03a11y);
     font-weight: 700;
+    color: var(--gray03a11y);
     text-decoration: underline; }
 
 .crew {
@@ -49,16 +49,16 @@ html {
 
 .crew__title {
   margin: 0;
-  font-weight: 700;
-  font-size: 36px;
   font-family: var(--titleFont);
+  font-size: 36px;
+  font-weight: 700;
   line-height: 48px;
   letter-spacing: -0.045em; }
 
 .crew__subtitle {
   margin: 0 0 10px;
-  font-weight: 600;
   font-size: 18px;
+  font-weight: 600;
   line-height: 27px;
   text-transform: uppercase; }
 
@@ -76,11 +76,10 @@ html {
 .crew__list {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 10px 27px;
   margin: 0 0 96px;
   padding: 0;
-  column-gap: 27px;
-  list-style-type: none;
-  row-gap: 10px; }
+  list-style-type: none; }
   .crew__list > * {
     position: relative; }
   .crew__list > *:nth-child(2n) {
@@ -98,8 +97,8 @@ html {
 
 .crew-list-item__name {
   margin: 0;
-  font-weight: 600;
   font-size: 14px;
+  font-weight: 600;
   line-height: 21px; }
   @media (min-width: 600px) {
     .crew-list-item__name {
@@ -110,14 +109,14 @@ html {
   position: absolute;
   top: 0;
   right: 0;
-  margin: 0;
-  font-weight: 400;
-  font-size: 10px;
-  font-family: var(--titleFont);
-  line-height: 13px;
-  text-transform: uppercase;
+  transform-origin: top left;
   transform: translate(100%) rotate(90deg);
-  transform-origin: top left; }
+  margin: 0;
+  font-family: var(--titleFont);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 13px;
+  text-transform: uppercase; }
   @media (min-width: 600px) {
     .crew-list-item__title {
       font-size: 12px;

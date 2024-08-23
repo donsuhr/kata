@@ -9,44 +9,44 @@
 .timer {
   position: relative;
   display: grid;
+  place-items: center;
   width: 500px;
   height: 500px;
   background: radial-gradient(71.4% 71.4% at 51.7% 28.6%, #3a393f 0%, #17171a 100%);
   border-radius: 50%;
-  box-shadow: -5px 14px 44px var(--black), 5px -16px 50px rgb(255 255 255 / 15%);
-  place-items: center; }
+  box-shadow: -5px 14px 44px var(--black), 5px -16px 50px rgb(255 255 255 / 15%); }
   .timer:before {
-    position: absolute;
-    border: 8px solid var(--black);
-    border-radius: 50%;
     content: '';
-    inset: -3px; }
+    position: absolute;
+    inset: -3px;
+    border: 8px solid var(--black);
+    border-radius: 50%; }
 
 .timer__controls {
+  transform: translateY(36px);
   display: flex;
   flex-direction: column;
-  place-items: center;
-  transform: translateY(36px); }
+  place-items: center; }
 
 .timer__input-wrapper {
-  color: var(--buttonColor);
-  font-weight: 400;
-  font-size: 196px;
+  -webkit-user-select: none;
+          user-select: none;
   font-family: var(--timerFont);
+  font-size: 196px;
+  font-weight: 400;
   line-height: 1;
+  color: var(--buttonColor);
   white-space: nowrap;
   background: linear-gradient(180deg, #fff 0%, #d5d8e1 100%);
-  background-clip: text;
-  -webkit-user-select: none;
-          user-select: none; }
+  background-clip: text; }
 
 .timer__input {
   width: 2ch;
   margin: 0;
   padding: 0;
-  color: var(--buttonColor);
-  font-size: 196px;
   font-family: var(--timerFont);
+  font-size: 196px;
+  color: var(--buttonColor);
   text-align: center;
   text-shadow: 0 4px 4px rgb(0 0 0 / 25%);
   background: linear-gradient(180deg, #fff 0%, #d5d8e1 100%);
@@ -58,14 +58,14 @@
     outline: none; }
 
 .timer__config-button {
+  cursor: pointer;
   display: block;
   width: 34px;
   height: 34px;
   padding: 0;
+  opacity: 00.5;
   background: none;
   border: 0;
-  cursor: pointer;
-  opacity: 00.5;
   transition: opacity 0.15s ease-out; }
   .timer__config-button:hover, .timer__config-button:focus-visible {
     opacity: 1; }
@@ -73,22 +73,22 @@
     opacity: 1; }
 
 .timer__start-button {
+  cursor: pointer;
   margin: 0 -0.6em 13px 0;
   padding: 10px;
-  color: var(--buttonColor);
-  font-weight: 700;
-  font-size: 16px;
   font-family: var(--buttonFont);
+  font-size: 16px;
+  font-weight: 700;
   line-height: 20px;
-  letter-spacing: 0.6em;
+  color: var(--buttonColor);
   text-align: center;
-  text-transform: uppercase;
   text-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+  text-transform: uppercase;
+  letter-spacing: 0.6em;
+  opacity: 00.5;
   background: linear-gradient(180deg, #fff 0%, #d5d8e1 100%);
   background-clip: text;
   border: 0;
-  cursor: pointer;
-  opacity: 00.5;
   transition: opacity 0.15s ease-out; }
   .timer__start-button:hover, .timer__start-button:focus-visible {
     opacity: 1; }
@@ -97,27 +97,27 @@
   --dataStrokeOffset: 0; }
 
 .progressbar__svg {
+  pointer-events: none;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
   transform: rotate(-90deg) scaleY(-1);
-  pointer-events: none; }
+  overflow: visible;
+  width: 100%;
+  height: 100%; }
 
 .progressbar__circle {
-  transition: stroke-dashoffset 250ms linear;
   fill: none;
   stroke: var(--red);
-  stroke-width: 0.5;
   stroke-dasharray: 100;
   stroke-dashoffset: var(--dataStrokeOffset);
-  stroke-linecap: round; }
+  stroke-linecap: round;
+  stroke-width: 0.5;
+  transition: stroke-dashoffset 250ms linear; }
   [data-state='editing'] .progressbar__circle,
   [data-state='stopped'] .progressbar__circle {
     filter: none;
-    transition: stroke-dashoffset 1ms linear;
     stroke: var(--green);
-    stroke-dashoffset: var(--dataStrokeOffset); }
+    stroke-dashoffset: var(--dataStrokeOffset);
+    transition: stroke-dashoffset 1ms linear; }
 
 :root {
   --backgroundColor: #2b2a30;
@@ -136,11 +136,11 @@
 
 body {
   display: grid;
+  place-items: center;
   width: 100vw;
   height: 100vh;
   margin: 0;
   padding: 0;
-  place-items: center;
   background-color: var(--backgroundColor); }
 
 * {

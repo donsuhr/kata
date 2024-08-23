@@ -51,13 +51,13 @@ main {
   margin: 0; }
 
 .page__title {
-  font-weight: 700;
-  font-size: 24px;
   font-family: var(--titleFont);
+  font-size: 24px;
+  font-weight: 700;
   font-style: normal;
   line-height: 25px;
-  letter-spacing: -0.08em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: -0.08em; }
   @media (min-width: 600px) {
     .page__title {
       font-size: 30px; } }
@@ -66,31 +66,31 @@ main {
   font-family: var(--footerFont); }
 
 .footer__created-by {
-  color: var(--gray03a11y);
-  font-weight: 500;
   font-size: 14px;
+  font-weight: 500;
   font-style: normal;
   line-height: 17px;
+  color: var(--gray03a11y);
   text-align: center; }
   .footer__created-by a:link, .footer__created-by a:visited, .footer__created-by a:active {
-    color: var(--gray03a11y);
     font-weight: 700;
+    color: var(--gray03a11y);
     text-decoration: none; }
   .footer__created-by a:hover {
-    color: var(--gray03a11y);
     font-weight: 700;
+    color: var(--gray03a11y);
     text-decoration: underline; }
 
 .button {
   padding: 24px 43px;
-  color: var(--white);
-  font-weight: 700;
   font-size: 14px;
+  font-weight: 700;
   font-style: normal;
   line-height: 21px;
-  letter-spacing: -0.035em;
-  text-transform: uppercase;
+  color: var(--white);
   text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: -0.035em;
   background: var(--gray02); }
   a.button:link, a.button:visited, a.button:hover, a.button:active {
     color: var(--white);
@@ -130,8 +130,8 @@ main {
       display: flex; } }
 
 .card__content {
-  font-weight: 400;
   font-size: 18px;
+  font-weight: 400;
   font-style: normal;
   line-height: 27px;
   letter-spacing: -0.035em; }
@@ -143,11 +143,11 @@ main {
 
 .card__headline {
   margin: 0;
-  color: var(--gray01);
-  font-weight: 700;
   font-size: 48px;
+  font-weight: 700;
   font-style: normal;
   line-height: 71px;
+  color: var(--gray01);
   letter-spacing: -0.035em; }
   @media (min-width: 600px) {
     .card__headline {
