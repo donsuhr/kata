@@ -35,7 +35,6 @@
     ],
     "at-rule-no-vendor-prefix": true,
     "color-named": "never",
-    "custom-property-pattern": "^[a-zA-Z0-9]+$",
     "declaration-block-no-redundant-longhand-properties": true,
     "declaration-no-important": true,
     "declaration-property-value-disallowed-list": {
@@ -102,5 +101,17 @@
     ],
     "value-keyword-case": "lower",
     "value-no-vendor-prefix": true
-  }
+  },
+  "overrides": [
+    {
+      "files": [
+        "src/advent_2021/01_pomodoro-timer/**/*.scss",
+        "src/devchallenges.io/01_404/**/*.scss",
+        "src/devchallenges.io/02_my-team-page/**/*.scss"
+      ],
+      "rules": {
+        "custom-property-pattern": "^[a-zA-Z0-9]+$"
+      }
+    }
+  ]
 }
