@@ -1,0 +1,84 @@
+@value button from "../NumberStepper/NumberStepper.module.css";
+
+.button {
+  background: var(--c-blue300);
+}
+
+.item {
+  display: grid;
+  grid-template-areas:
+    'img title title'
+    'img itemPrice itemStatus'
+    'img quantity price';
+  grid-template-columns: 68px 1fr 1fr;
+  gap: 0 10px;
+
+  margin: 0 0 30px;
+  padding: 0 0 40px;
+
+  border-bottom: 1px solid var(--c-blue100);
+
+  &:last-child {
+    border-bottom-width: 5px;
+  }
+}
+
+.itemImgWrapper {
+  display: grid;
+  grid-area: img;
+  align-self: flex-start;
+}
+
+.itemImg {
+  grid-area: 1/1;
+  max-width: 100%;
+}
+
+.quantity {
+  display: flex;
+  grid-area: 1 / 1;
+  place-self: center center;
+  align-items: center;
+  justify-content: center;
+
+  aspect-ratio: 1/1;
+  min-width: 1.75em;
+  padding: 0 8px;
+
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+
+  background: rgb(0 0 0 / 75%);
+  border-radius: 50%;
+}
+
+.title {
+  grid-area: title;
+
+  margin: 0;
+  padding: 10px 0 0;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.price {
+  grid-area: itemPrice;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 2;
+}
+
+.totalPrice {
+  grid-area: price;
+  place-self: end right;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.itemStatus {
+  grid-area: itemStatus;
+}
+

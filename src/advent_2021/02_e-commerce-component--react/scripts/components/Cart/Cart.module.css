@@ -1,0 +1,14 @@
+.cart {
+  padding: 50px 0;
+}
+
+.list {
+  overflow: auto;
+  flex: 1;
+  margin: 0 0 35px;
+  padding: 0 25px;
+}
+
+
+
+

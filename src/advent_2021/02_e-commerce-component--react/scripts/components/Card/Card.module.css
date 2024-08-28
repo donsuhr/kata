@@ -1,0 +1,18 @@
+.card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  max-width: 475px;
+  min-height: 520px;
+  max-height: calc(100vh - 88px);
+  padding: 50px 0 0;
+
+  background: #fff;
+  border-radius: 25px;
+  box-shadow: 0 0 70px 0 #c7cbe3;
+}
+
+.title {
+  margin: 0 0 20px 37px;
+}

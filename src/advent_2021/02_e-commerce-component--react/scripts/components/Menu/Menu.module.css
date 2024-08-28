@@ -1,0 +1,16 @@
+.loading {
+  margin: auto;
+}
+
+.list {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  margin: 0;
+  padding: 0 0 15px;
+
+  list-style-type: none;
+}
+
