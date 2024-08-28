@@ -29,7 +29,8 @@
           "mixin",
           "warn",
           "return",
-          "at-root"
+          "at-root",
+          "value"
         ]
       }
     ],
@@ -57,6 +58,7 @@
     "scss/at-else-empty-line-before": "never",
     "scss/at-extend-no-missing-placeholder": true,
     "scss/at-function-pattern": "^[a-z0-9\\-_]+$",
+    "scss/at-rule-no-unknown": [true, { "ignoreAtRules": ["value"] }],
     "scss/at-if-closing-brace-newline-after": "always-last-in-chain",
     "scss/at-if-closing-brace-space-after": "always-intermediate",
     "scss/load-no-partial-leading-underscore": true,

@@ -1,6 +1,6 @@
 import type { FoodMenuItem } from './items-store.js';
-import { wait, debouncePromise } from './utils.js';
 import { STATUS, Status } from './types.js';
+import { wait, debouncePromise } from './utils.js';
 
 type CartItem = FoodMenuItem & { quantity: number; status: Status };
 type LocalStorageItem = { id: string; quantity: number };

@@ -1,6 +1,6 @@
 const { minify } = require('html-minifier-terser');
 
-module.exports = function (eleventyConfig) {
+module.exports = function setEleventyConfig(eleventyConfig) {
   eleventyConfig.addTransform('htmlmin', async (content, outputPath) => {
     if (process.env.NODE_ENV === 'production') {
       if (outputPath.endsWith('.html')) {

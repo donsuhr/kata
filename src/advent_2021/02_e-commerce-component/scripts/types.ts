@@ -1,4 +1,3 @@
-
 export const STATUS = {
   DIRTY: 'dirty',
   LOADING: 'loading',
@@ -8,4 +7,3 @@ export const STATUS = {
 
 type StatusType = typeof STATUS;
 export type Status = StatusType[keyof StatusType];
-

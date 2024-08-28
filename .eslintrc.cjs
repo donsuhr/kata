@@ -13,6 +13,35 @@ module.exports = {
   rules: {
     'import/prefer-default-export': 'off',
     'no-case-declarations': 'off',
+    'import/no-extraneous-dependencies': [
+      'error',
+      { devDependencies: ['*.cjs'] },
+    ],
+    'import/order': [
+      'error',
+      {
+        alphabetize: {
+          order: 'asc',
+        },
+        'newlines-between': 'always',
+        pathGroups: [
+          {
+            pattern: '#*/**',
+            group: 'internal',
+            position: 'before',
+          },
+        ],
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+        ],
+        pathGroupsExcludedImportTypes: ['react'],
+      },
+    ],
   },
 
   overrides: [
@@ -31,16 +60,6 @@ module.exports = {
 
       rules: {
         'react/require-default-props': 'off',
-      },
-    },
-
-    {
-      files: ['*.js'],
-      env: {
-        node: true,
-      },
-      rules: {
-        'import/no-extraneous-dependencies': 'off',
       },
     },
 

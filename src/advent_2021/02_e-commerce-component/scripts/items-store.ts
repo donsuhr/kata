@@ -1,5 +1,5 @@
-import { wait } from './utils.js';
 import { STATUS, Status } from './types.js';
+import { wait } from './utils.js';
 
 export type FoodMenuItem = {
   id: string;
