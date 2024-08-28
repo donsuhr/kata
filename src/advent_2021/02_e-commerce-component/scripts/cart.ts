@@ -1,7 +1,7 @@
-import { render as renderSteppers } from './number-stepper.js';
-import { formatDollars } from './utils.js';
 import * as Store from './cart-store.js';
+import { render as renderSteppers } from './number-stepper.js';
 import { STATUS, Status } from './types.js';
+import { formatDollars } from './utils.js';
 
 const SUBTOTAL_SELECTOR = '#CartSubTotal';
 const TOTAL_SELECTOR = '#CartTotal';
@@ -77,7 +77,6 @@ const renderList = () => {
             <div class="cart-list__item-price">${formatDollars(item.price)}</div>
             <div class="cart-list__item-status"> ${status}</div>
             <div class="cart-list__quantity-control-target"></div>
-            </div>
             <div class="cart-list__total-price">${totalPrice}</div>
           </li>
           `;
