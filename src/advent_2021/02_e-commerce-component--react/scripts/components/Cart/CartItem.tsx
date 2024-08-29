@@ -15,7 +15,7 @@ type Props = {
 const statusIcons = new Map<Status, string>([
   [STATUS.DIRTY, '⌛️'],
   [STATUS.LOADING, '🔄'],
-  [STATUS.SUCCESS, 'xx'],
+  [STATUS.SUCCESS, ''],
   [STATUS.ERROR, '⚠️'],
 ]);
 

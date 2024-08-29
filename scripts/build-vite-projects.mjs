@@ -7,6 +7,8 @@ spawn(
     './src/advent_2021/02_e-commerce-component--react',
     '--outDir=../../../dist/kata/advent_2021/02_e-commerce-component--react',
     '--base=./',
+    '--emptyOutDir=false',
+    '--sourcemap=true',
   ],
   { stdio: 'inherit' },
 );

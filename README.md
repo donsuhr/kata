@@ -9,3 +9,4 @@
 
 - [01_pomodoro](https://donsuhr.github.io/kata/advent_2021/01_pomodoro-timer/README/)
 - [02_e-commerce-component](https://donsuhr.github.io/kata/advent_2021/02_e-commerce-component/README/)
+- [02_e-commerce-component--react](https://donsuhr.github.io/kata/advent_2021/02_e-commerce-component--react/README/)
