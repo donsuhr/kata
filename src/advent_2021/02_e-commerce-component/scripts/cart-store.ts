@@ -118,7 +118,7 @@ const addItem = async (item: FoodMenuItem, quantity = 1, persist = true) => {
 const restoreFromLocalStorage = async (menuItems: FoodMenuItem[]) => {
   try {
     const values = JSON.parse(
-      localStorage.getItem(LS_CART_KEY) ?? '',
+      localStorage.getItem(LS_CART_KEY) ?? '[]',
     ) as LocalStorageItem[];
 
     await Promise.all(
