@@ -2,11 +2,12 @@ import * as React from 'react';
 
 import styles from './NumberStepper.module.css';
 
-type Props = {
+export type Props = {
   value?: number;
   step?: number;
   min?: number;
   size?: number;
+  label: string;
   onChange?: (val: number) => void;
 };
 
@@ -15,6 +16,7 @@ export default function NumberStepper({
   step = 1,
   min = 0,
   size = 2,
+  label,
   onChange,
 }: Props) {
   const [val, setVal] = React.useState(value);
@@ -27,6 +29,16 @@ export default function NumberStepper({
       setVal(val + direction);
       if (onChange) {
         onChange(val + direction);
+      }
+    }
+  };
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newVal = parseInt(event.target.value, 10);
+    if (newVal >= min) {
+      setVal(newVal);
+      if (onChange) {
+        onChange(newVal);
       }
     }
   };
@@ -47,6 +59,8 @@ export default function NumberStepper({
         size={size}
         min={min}
         value={val}
+        onChange={handleInputChange}
+        aria-label={label}
       />
       <button
         type="button"

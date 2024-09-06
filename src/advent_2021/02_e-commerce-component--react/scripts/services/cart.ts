@@ -46,7 +46,7 @@ export default class Persistance {
       });
     } catch (e) {
       // eslint-disable-next-line no-console
-      console.error('LocalStorage error', e);
+      console.error('LocalStorage error', e, { items });
       items.forEach((item) => {
         this.#dispatch({
           type: ACTIONS.SAVE_ERROR,
@@ -56,7 +56,6 @@ export default class Persistance {
     }
   }
 
-  // @debounced()
   async debouncedWrite(cart: CartItem[]) {
     await this.#debouncedWrite(cart);
   }
@@ -64,7 +63,7 @@ export default class Persistance {
   restore(menuItems: FoodMenuItem[]) {
     try {
       const values = JSON.parse(
-        localStorage.getItem(LS_CART_KEY) ?? '',
+        localStorage.getItem(LS_CART_KEY) ?? '[]',
       ) as LocalStorageItem[];
 
       const cartItems = values.reduce<CartItem[]>((acc, localStorageItem) => {

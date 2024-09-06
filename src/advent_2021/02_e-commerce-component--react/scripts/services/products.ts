@@ -1,4 +1,4 @@
-import  { STATUS, Status } from '../types.js';
+import { STATUS, Status } from '../types.js';
 import { wait } from '../utils.js';
 
 export type FoodMenuItem = {
@@ -28,7 +28,9 @@ const load = (): Promise<FoodMenuItem[]> => {
       .then(() => fetch(itemsDataUrl))
       .then((response) => {
         if (!response.ok) {
-          throw new Error(`Response status: ${response.status}`);
+          throw new Error(
+            `Response Error fetching food item data. Response status: ${response.status}`,
+          );
         }
         return response.json();
       })

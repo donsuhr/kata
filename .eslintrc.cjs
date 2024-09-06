@@ -15,7 +15,7 @@ module.exports = {
     'no-case-declarations': 'off',
     'import/no-extraneous-dependencies': [
       'error',
-      { devDependencies: ['*.cjs'] },
+      { devDependencies: ['*.cjs', '**/*.config.mjs'] },
     ],
     'import/order': [
       'error',
@@ -55,7 +55,7 @@ module.exports = {
         'plugin:react/recommended',
       ],
       parserOptions: {
-        project: './tsconfig.json',
+        project: './tsconfig.eslint.json',
       },
 
       rules: {

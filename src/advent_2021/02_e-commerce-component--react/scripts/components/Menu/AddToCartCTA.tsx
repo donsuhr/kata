@@ -6,7 +6,7 @@ import { useCartState, ACTIONS } from '../Cart/CartStateProvider.js';
 import styles from './AddToCartCTA.module.css';
 
 type Props = {
-  inCart: boolean;
+  inCart?: boolean;
   item: FoodMenuItem;
 };
 

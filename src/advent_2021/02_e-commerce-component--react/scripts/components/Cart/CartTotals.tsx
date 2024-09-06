@@ -7,6 +7,7 @@ import styles from './CartTotals.module.css';
 
 export default function CardTotals() {
   const { totals } = useCartState();
+
   return (
     <dl className={styles.cartTotals}>
       <dt className={styles.title}>Subtotal:</dt>

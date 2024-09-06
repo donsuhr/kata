@@ -8,9 +8,12 @@ import { useMenuState } from '../Menu/MenuStateProvider.js';
 
 export type CartItem = FoodMenuItem & { quantity: number; status: Status };
 
-type ProviderProps = { children: React.ReactNode };
+type ProviderProps = {
+  children: React.ReactNode;
+  initialCartItems?: State['cart'];
+};
 
-export type ProviderContextType = ItemsState & {
+export type ProviderContextType = State & {
   dispatch: React.Dispatch<ItemReducerAction>;
   hasItemById: (id: string) => boolean;
 };
@@ -21,12 +24,12 @@ type Totals = {
   grandTotal: number;
 };
 
-type ItemsState = {
+export type State = {
   cart: CartItem[];
   totals: Totals;
 };
 
-type ItemReducerAction = {
+export type ItemReducerAction = {
   type: Action;
   payload: FoodMenuItem | CartItem | CartItem[];
 };
@@ -36,7 +39,10 @@ function isFoodMenuItem(
 ): payload is FoodMenuItem {
   return (
     !Array.isArray(payload) &&
-    !Object.hasOwn(payload as FoodMenuItem, 'quantity')
+    !Object.hasOwn(payload as FoodMenuItem, 'quantity') &&
+    Object.hasOwn(payload as FoodMenuItem, 'id') &&
+    Object.hasOwn(payload as FoodMenuItem, 'title') &&
+    Object.hasOwn(payload as FoodMenuItem, 'price')
   );
 }
 
@@ -65,7 +71,7 @@ export type Action = ActionsType[keyof ActionsType];
 const Context = React.createContext<ProviderContextType | null>(null);
 let persistance: Persistance;
 
-const initialItemsState: ItemsState = {
+const defaultState: State = {
   cart: [],
   totals: {
     subTotal: 0,
@@ -109,10 +115,10 @@ const addCartItemToCart = (cart: CartItem[], updatedItem: CartItem) => [
   { ...updatedItem },
 ];
 
-const itemsReducer = (
-  state: ItemsState,
+export const itemsReducer = (
+  state: State,
   action: ItemReducerAction,
-): ItemsState => {
+): State => {
   if (isCartItem(action.payload) || isFoodMenuItem(action.payload)) {
     switch (action.type) {
       case ACTIONS.ADD:
@@ -218,12 +224,19 @@ const itemsReducer = (
   throw Error('Unknown argument type');
 };
 
-function Provider({ children }: ProviderProps) {
+function Provider({ children, initialCartItems }: ProviderProps) {
   const { items: menuItems, status: menuItemsStatus } = useMenuState();
+
+  const initialCart = initialCartItems ?? defaultState.cart;
+  const initialTotals = calculateTotals(initialCart);
+  const initialReducerState = {
+    cart: initialCart,
+    totals: initialTotals,
+  };
 
   const [{ cart, totals }, dispatch] = React.useReducer(
     itemsReducer,
-    initialItemsState,
+    initialReducerState,
   );
 
   persistance = React.useMemo(() => new Persistance(dispatch), [dispatch]);

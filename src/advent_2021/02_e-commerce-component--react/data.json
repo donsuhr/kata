@@ -22,7 +22,7 @@
       "id": "4",
       "title": "Tortellini",
       "price": 6.99,
-        "imageUrl": "./assets/images/plate__tortellini.png"
+      "imageUrl": "./assets/images/plate__tortellini.png"
     },
     {
       "id": "5",

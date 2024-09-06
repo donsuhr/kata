@@ -1,6 +1,5 @@
 import * as React from 'react';
 
-
 import Cart from '../../components/Cart/Cart.js';
 import Menu from '../../components/Menu/Menu.js';
 import { Provider as CartProvider } from '../Cart/CartStateProvider.js';

@@ -22,7 +22,9 @@ const statusIcons = new Map<Status, string>([
 export default function CartItem({ item }: Props) {
   const { dispatch } = useCartState();
   const { id, quantity, title, price, imageUrl, status } = item;
+
   const statusIcon = statusIcons.get(status) ?? '🔪';
+
   const totalPrice = formatDollars(price * quantity);
 
   const handleChange = (newVal: number) => {
@@ -41,7 +43,12 @@ export default function CartItem({ item }: Props) {
       <h2 className={styles.title}>{title}</h2>
       <div className={styles.price}>{formatDollars(price)}</div>
       <div className={styles.status}>{statusIcon}</div>
-      <NumberStepper value={quantity} onChange={handleChange} min={0} />
+      <NumberStepper
+        value={quantity}
+        onChange={handleChange}
+        min={0}
+        label="quantity"
+      />
       <div className={styles.totalPrice}>{totalPrice}</div>
     </li>
   );

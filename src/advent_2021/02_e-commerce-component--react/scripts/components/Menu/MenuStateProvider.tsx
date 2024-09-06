@@ -3,7 +3,11 @@ import * as React from 'react';
 import { FoodMenuItem, getItems } from '../../services/products.js';
 import { STATUS, Status } from '../../types.js';
 
-type ProviderProps = { children: React.ReactNode };
+type ProviderProps = {
+  children: React.ReactNode;
+  initialStatus?: ProviderContextType['status'];
+  initialItems?: ProviderContextType['items'];
+};
 
 type ProviderContextType = {
   items: FoodMenuItem[];
@@ -14,10 +18,15 @@ type ProviderContextType = {
 
 const Context = React.createContext<ProviderContextType | null>(null);
 
-function Provider({ children }: ProviderProps) {
-  const [items, setItems] = React.useState<ProviderContextType['items']>([]);
+function Provider({
+  children,
+  initialStatus = null,
+  initialItems = [],
+}: ProviderProps) {
+  const [items, setItems] =
+    React.useState<ProviderContextType['items']>(initialItems);
   const [status, setStatus] =
-    React.useState<ProviderContextType['status']>(null);
+    React.useState<ProviderContextType['status']>(initialStatus);
 
   React.useEffect(() => {
     // fire-and-forget
