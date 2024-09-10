@@ -37,6 +37,27 @@
       </section>
     </main>
 
+    <template id="cart-item-template">
+      <li class="cart-list__item" data-id="">
+        <div class="cart-list__img-wrapper">
+          <img class="cart-list__item-img" src="" />
+          <div
+            class="cart-list__item-current-quantity"
+            aria-label="quantity"
+          ></div>
+        </div>
+
+        <h2 class="cart-list__item-title"></h2>
+        <div class="cart-list__item-price" aria-label="single item price"></div>
+        <div class="cart-list__item-status"></div>
+        <div class="cart-list__quantity-control-target"></div>
+        <div
+          class="cart-list__total-price"
+          aria-label="total price for item"
+        ></div>
+      </li>
+    </template>
+
     <script src="./scripts/index.js" type="module"></script>
   </body>
 </html>

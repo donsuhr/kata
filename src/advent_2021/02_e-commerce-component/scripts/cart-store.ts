@@ -2,7 +2,7 @@ import type { FoodMenuItem } from './items-store.js';
 import { STATUS, Status } from './types.js';
 import { wait, debouncePromise } from './utils.js';
 
-type CartItem = FoodMenuItem & { quantity: number; status: Status };
+export type CartItem = FoodMenuItem & { quantity: number; status: Status };
 type LocalStorageItem = { id: string; quantity: number };
 
 const TAX_RATE = 0.0975;
