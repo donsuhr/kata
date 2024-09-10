@@ -1,5 +1,5 @@
-import { wait, debouncePromise } from './utils.js';
 import { STATUS } from './types.js';
+import { wait, debouncePromise } from './utils.js';
 const TAX_RATE = 0.0975;
 const UPDATE = 'update';
 const LS_CART_KEY = 'kata_cart';
@@ -96,7 +96,7 @@ const addItem = async (item, quantity = 1, persist = true) => {
 };
 const restoreFromLocalStorage = async menuItems => {
   try {
-    const values = JSON.parse(localStorage.getItem(LS_CART_KEY) ?? '');
+    const values = JSON.parse(localStorage.getItem(LS_CART_KEY) ?? '[]');
     await Promise.all(values.map(async localStorageItem => {
       const menuItem = menuItems.find(item => item.id === localStorageItem.id);
       if (menuItem) {

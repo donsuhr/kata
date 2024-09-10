@@ -1,5 +1,5 @@
-import { STATUS } from './types.js';
-import { wait } from './utils.js';
+import { STATUS } from '../types.js';
+import { wait } from '../utils.js';
 const itemsDataUrl = './data.json';
 let items = [];
 let status = null;
@@ -12,7 +12,7 @@ const load = () => {
     status = STATUS.LOADING;
     wait().then(() => fetch(itemsDataUrl)).then(response => {
       if (!response.ok) {
-        throw new Error(`Response status: ${response.status}`);
+        throw new Error(`Response Error fetching food item data. Response status: ${response.status}`);
       }
       return response.json();
     }).then(json => {

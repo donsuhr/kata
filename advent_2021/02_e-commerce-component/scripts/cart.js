@@ -1,7 +1,7 @@
-import { render as renderSteppers } from './number-stepper.js';
-import { formatDollars } from './utils.js';
 import * as Store from './cart-store.js';
+import { render as renderSteppers } from './number-stepper.js';
 import { STATUS } from './types.js';
+import { formatDollars } from './utils.js';
 const SUBTOTAL_SELECTOR = '#CartSubTotal';
 const TOTAL_SELECTOR = '#CartTotal';
 const TAX_TOTAL_SELECTOR = '#CartTaxTotal';
@@ -36,7 +36,7 @@ const updateDisplayTotals = () => {
   totalEl.innerText = formatDollars(total);
   taxTotalEl.innerText = formatDollars(taxTotal);
 };
-const renderList = () => {
+export const renderList = () => {
   childrenRequiringCleanup.forEach((cleanUpFn, key) => {
     cleanUpFn();
     childrenRequiringCleanup.delete(key);
@@ -54,34 +54,37 @@ const renderList = () => {
     const totalPrice = formatDollars(item.price * item.quantity);
     const statusIcons = new Map([[STATUS.DIRTY, '⌛️'], [STATUS.LOADING, '🔄'], [STATUS.SUCCESS, ''], [STATUS.ERROR, '⚠️']]);
     const status = statusIcons.get(item.status) ?? '🔪';
-    const wrapperEl = document.createElement('li');
-    wrapperEl.className = 'cart-list__item';
-    wrapperEl.dataset.id = item.id;
-    wrapperEl.innerHTML = `
-            <div class="cart-list__img-wrapper">
-              <img
-                class="cart-list__item-img"
-                src="${item.imageUrl}"
-              />
-              <div class="cart-list__item-current-quantity">${item.quantity}</div>
-            </div>
-
-            <h2 class="cart-list__item-title">${item.title}</h2>
-            <div class="cart-list__item-price">${formatDollars(item.price)}</div>
-            <div class="cart-list__item-status"> ${status}</div>
-            <div class="cart-list__quantity-control-target"></div>
-            </div>
-            <div class="cart-list__total-price">${totalPrice}</div>
-          </li>
-          `;
-    const quantityControlElContainer = wrapperEl.querySelector('.cart-list__quantity-control-target');
-    if (!quantityControlElContainer) {
-      throw new Error("Cart missing required element '.cart-list__quantity-control-target'");
-    }
+    const getTemplateElement = (parentEl, selector) => {
+      const el = parentEl.querySelector(selector);
+      if (!el) {
+        throw new Error(`Cart template missing required element '${selector}'`);
+      }
+      return el;
+    };
+    const templateEl = getTemplateElement(document, '#cart-item-template');
+    const liEl = templateEl.content.cloneNode(true).firstElementChild;
+    liEl.dataset.id = item.id;
+    const imgEl = getTemplateElement(liEl, '.cart-list__item-img');
+    imgEl?.setAttribute('src', item.imageUrl);
+    const quantityEl = getTemplateElement(liEl, '.cart-list__item-current-quantity');
+    quantityEl.textContent = String(item.quantity);
+    const titleEl = getTemplateElement(liEl, '.cart-list__item-title');
+    titleEl.textContent = item.title;
+    const priceEl = getTemplateElement(liEl, '.cart-list__item-price');
+    priceEl.textContent = formatDollars(item.price);
+    const statusEl = getTemplateElement(liEl, '.cart-list__item-status');
+    statusEl.textContent = status;
+    const totalPriceEl = getTemplateElement(liEl, '.cart-list__total-price');
+    totalPriceEl.textContent = totalPrice;
+    const quantityControlElContainer = getTemplateElement(liEl, '.cart-list__quantity-control-target');
     quantityControlElContainer.replaceWith(quantityControlEl);
-    return wrapperEl;
+    return liEl;
+
+    // return wrapperEl;
   });
-  getContainerEl().replaceChildren(...liElements);
+  const container = getContainerEl();
+  container.replaceChildren(...liElements);
+  return container;
 };
 const addListeners = () => {
   Store.dispatcher.addEventListener(Store.UPDATE, () => {

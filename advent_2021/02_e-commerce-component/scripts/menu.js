@@ -1,5 +1,6 @@
-import { getItems as getMenuItems } from './items-store.js';
 import { addItem, dispatcher, hasItemById, UPDATE } from './cart-store.js';
+import { getItems as getMenuItems } from './items-store.js';
+import { formatDollars } from './utils.js';
 const CONTAINER_SELECTOR = '.menu-list';
 const getContainerEl = () => {
   const el = document.querySelector(CONTAINER_SELECTOR);
@@ -22,7 +23,7 @@ const renderList = async () => {
         <img src="${item.imageUrl}" class="menu-list-item__img" />
         <div class="menu-list-item__content">
           <h2 class="menu-list-item__title">${item.title}</h2>
-          <p class="menu-list-item__price">${item.price}</p>
+          <p class="menu-list-item__price">${formatDollars(item.price)}</p>
           ${CTA}
          </div>
        </li>`;
