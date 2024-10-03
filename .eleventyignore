@@ -1,1 +1,4 @@
 src/advent_2021/02_e-commerce-component--react/index.html
+**/dist/**
+src/**/src/**
+**/coverage/**

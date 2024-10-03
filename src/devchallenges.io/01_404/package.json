@@ -1,0 +1,24 @@
+{
+  "name": "kata__devchallengesio__01_404",
+  "version": "1.0.0",
+  "license": "ISC",
+  "scripts": {
+    "build": "npm-run-all --serial clean copy:images && NODE_ENV=production npm-run-all --parallel build:*",
+    "build:html": "eleventy",
+    "build:scripts": "babel --root-mode upward src --out-dir dist --extensions .ts,.tsx",
+    "build:styles": "npm run styles -- --style=compressed",
+    "clean": "rm -rf ./dist && rm -rf .tmp",
+    "copy:images": "copyfiles --up 1 --verbose src/**/*.{png,jpg,webp,woff,woff2,svg,json} dist",
+    "lint": "npm-run-all --serial --continue-on-error lint:*",
+    "lint:scripts": "eslint . --ext .js,.jsx,.ts,.tsx,.cjs --ignore-path ../../../.eslintignore",
+    "lint:scripts:fix": "prettier . --write && npm run lint:scripts -- --fix",
+    "lint:styles": "stylelint \"./src/**/*.{css,scss,sass}\" --cache --config ../../../.stylelintrc.json ",
+    "lint:types": "tsc  --noEmit",
+    "scripts:watch": "babel --root-mode upward src --out-dir dist --extensions .ts --watch",
+    "serve": "eleventy --serve",
+    "start": "npm-run-all --serial clean copy:images && npm run styles && npm-run-all --parallel serve styles:watch scripts:watch",
+    "styles": "node-sass src -o .tmp --source-map true && postcss .tmp/**/*.css --base .tmp --dir dist --verbose",
+    "styles:watch": "concurrently \"node-sass src -o .tmp --source-map true --watch\" \"postcss .tmp/**/*.css --verbose --base .tmp --dir dist --watch\""
+  },
+  "devDependencies": {}
+}

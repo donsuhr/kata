@@ -114,6 +114,10 @@
       "rules": {
         "custom-property-pattern": "^[a-zA-Z0-9]+$"
       }
+    },
+    {
+      "files": ["*.html", "**/*.html"],
+      "customSyntax": "postcss-html"
     }
   ]
 }

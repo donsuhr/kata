@@ -1,21 +1,15 @@
 module.exports = {
   root: true,
-  extends: [
-    'airbnb',
-    // 'plugin:react/recommended',
-    'plugin:eslint-comments/recommended',
-    // 'plugin:jest/recommended',
-    // 'plugin:promise/recommended',
-    // 'plugin:unicorn/recommended',
-    'prettier',
-    // 'prettier/react',
-  ],
+  extends: ['airbnb', 'plugin:eslint-comments/recommended', 'prettier'],
   rules: {
     'import/prefer-default-export': 'off',
     'no-case-declarations': 'off',
     'import/no-extraneous-dependencies': [
       'error',
-      { devDependencies: ['*.cjs', '**/*.config.mjs'] },
+      {
+        packageDir: __dirname,
+        devDependencies: ['**/*.cjs', '**/*.config.mjs'],
+      },
     ],
     'import/order': [
       'error',
@@ -55,11 +49,19 @@ module.exports = {
         'plugin:react/recommended',
       ],
       parserOptions: {
+        tsconfigRootDir: __dirname,
         project: './tsconfig.eslint.json',
       },
 
       rules: {
         'react/require-default-props': 'off',
+        'import/no-extraneous-dependencies': [
+          'error',
+          {
+            packageDir: __dirname,
+            devDependencies: ['**/*.spec.{ts,tsx}'],
+          },
+        ],
       },
     },
 
@@ -76,6 +78,10 @@ module.exports = {
         ecmaVersion: 2019,
         sourceType: 'module',
       },
+    },
+    {
+      files: ['**/*.html'],
+      plugins: ['html'],
     },
   ],
 };

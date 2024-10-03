@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import checkSvg from '../../../assets/images/check.svg';
 import type { FoodMenuItem } from '../../services/products.js';
 import { useCartState, ACTIONS } from '../Cart/CartStateProvider.js';
 
@@ -23,7 +24,7 @@ export default function AddToCartCTA({ inCart = false, item }: Props) {
 
   return inCart ? (
     <div className={styles.inCart}>
-      <img src="./assets/images/check.svg" alt="" />
+      <img src={checkSvg} alt="" />
       In Cart
     </div>
   ) : (
