@@ -1,5 +1,3 @@
-@value button from "../NumberStepper/NumberStepper.module.css";
-
 .button {
   background: var(--c-blue300);
 }

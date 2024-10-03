@@ -48,6 +48,7 @@ export default function CartItem({ item }: Props) {
         onChange={handleChange}
         min={0}
         label="quantity"
+        className={styles.button}
       />
       <div className={styles.totalPrice}>{totalPrice}</div>
     </li>

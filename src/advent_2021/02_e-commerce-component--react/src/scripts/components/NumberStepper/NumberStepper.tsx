@@ -3,21 +3,23 @@ import * as React from 'react';
 import styles from './NumberStepper.module.css';
 
 export type Props = {
-  value?: number;
-  step?: number;
-  min?: number;
-  size?: number;
+  className?: string;
   label: string;
+  min?: number;
   onChange?: (val: number) => void;
+  size?: number;
+  step?: number;
+  value?: number;
 };
 
 export default function NumberStepper({
-  value = 0,
-  step = 1,
-  min = 0,
-  size = 2,
+  className,
   label,
+  min = 0,
   onChange,
+  size = 2,
+  step = 1,
+  value = 0,
 }: Props) {
   const [val, setVal] = React.useState(value);
 
@@ -47,7 +49,7 @@ export default function NumberStepper({
     <div className={styles.numberStepper}>
       <button
         type="button"
-        className={styles.button}
+        className={`${className} ${styles.button}`}
         data-direction="decrease"
         onClick={handleButtonClick}
         aria-label={`decrease value by ${step}`}
@@ -64,7 +66,7 @@ export default function NumberStepper({
       />
       <button
         type="button"
-        className={styles.button}
+        className={`${className} ${styles.button}`}
         data-direction="increase"
         onClick={handleButtonClick}
         aria-label={`increase value by ${step}`}
