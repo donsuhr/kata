@@ -1,0 +1,57 @@
+@import 'page.css';
+@import 'news.css';
+@import 'article.css';
+@import 'badge.css';
+
+:root {
+  --color-black: #353534;
+  --color-brown: #8c7a6b;
+  --color-cream: #f6f5f1;
+  --color-gray: #777;
+  --color-light-red: #90323d;
+  --color-orange: #bc8034;
+  --color-red: #5e0b15;
+  --font-sansserif: montserrat;
+  --font-serif: playfair;
+  --gutter: 0.5em;
+}
+
+@font-face {
+  font-family: Playfair;
+  src: url('../fonts/PlayfairDisplay-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  margin: 0 var(--gutter);
+
+  font-family: var(--font-sansserif);
+  color: var(--color-black);
+
+  background: var(--color-cream);
+}
+
+main {
+  display: flex;
+  gap: var(--gutter);
+}

@@ -1,0 +1,29 @@
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter);
+  justify-content: end;
+  justify-self: right;
+
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.badge {
+  display: inline-block;
+
+  width: fit-content;
+  height: fit-content;
+  margin: 0;
+  padding: 0.1em 0.5em;
+
+  font-size: 0.8em;
+  color: var(--color-cream);
+
+  background: var(--color-red);
+
+  /* font-weight: bold; */
+  border-radius: 0.35em;
+}

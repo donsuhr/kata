@@ -4,49 +4,49 @@
       "id": "1",
       "title": "French Fries with Ketchup",
       "price": 2.23,
-      "imageUrl": "./assets/images/plate__french-fries.png"
+      "imageUrl": "./images/plate__french-fries.png"
     },
     {
       "id": "2",
       "title": "Salmon and Vegetables",
       "price": 5.12,
-      "imageUrl": "./assets/images/plate__salmon-vegetables.png"
+      "imageUrl": "./images/plate__salmon-vegetables.png"
     },
     {
       "id": "3",
       "title": "Spaghetti with Meat Sauce",
       "price": 7.82,
-      "imageUrl": "./assets/images/plate__spaghetti-meat-sauce.png"
+      "imageUrl": "./images/plate__spaghetti-meat-sauce.png"
     },
     {
       "id": "4",
       "title": "Tortellini",
       "price": 6.99,
-      "imageUrl": "./assets/images/plate__tortellini.png"
+      "imageUrl": "./images/plate__tortellini.png"
     },
     {
       "id": "5",
       "title": "Ravioli",
       "price": 6.99,
-      "imageUrl": "./assets/images/plate__ravioli.png"
+      "imageUrl": "./images/plate__ravioli.png"
     },
     {
       "id": "6",
       "title": "Fish Sticks and Fries",
       "price": 4.5,
-      "imageUrl": "./assets/images/plate__fish-sticks-fries.png"
+      "imageUrl": "./images/plate__fish-sticks-fries.png"
     },
     {
       "id": "7",
       "title": "Bacon and Eggs",
       "price": 5.99,
-      "imageUrl": "./assets/images/plate__bacon-eggs.png"
+      "imageUrl": "./images/plate__bacon-eggs.png"
     },
     {
       "id": "8",
       "title": "Chicken Cesar Salad",
       "price": 9.5,
-      "imageUrl": "./assets/images/plate__chicken-salad.png"
+      "imageUrl": "./images/plate__chicken-salad.png"
     }
   ]
 }
