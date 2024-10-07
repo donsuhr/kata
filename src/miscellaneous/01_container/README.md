@@ -18,7 +18,7 @@
 
 ## Overview
 
-![stationary web screenshot](https://raw.githubusercontent.com/donsuhr/kata/main/src/miscellaneous/01_container/src/images/screenshot.png)
+![stationary web screenshot](https://raw.githubusercontent.com/donsuhr/kata/main/src/miscellaneous/01_container/src/images/screenshot.jpg)
 
 ## Built With
 
