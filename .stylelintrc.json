@@ -50,7 +50,7 @@
     "property-no-unknown": [
       true,
       {
-        "ignoreProperties": ["text-fill-color"]
+        "ignoreProperties": ["text-fill-color", "box-orient"]
       }
     ],
     "scss/at-else-closing-brace-newline-after": "always-last-in-chain",

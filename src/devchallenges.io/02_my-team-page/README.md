@@ -24,14 +24,14 @@
 
 <figure>
 
-![mobile web screenshot](https://raw.githubusercontent.com/donsuhr/kata/main/src/devchallenges.io/02_my-team-page/img/localhost_8080_devchallenges.io_02_my-team-page_MW.png)
+![mobile web screenshot](https://raw.githubusercontent.com/donsuhr/kata/main/src/devchallenges.io/02_my-team-page/src/img/localhost_8080_devchallenges.io_02_my-team-page_MW.png)
 
 <figcaption>Mobile Screenshot</figcaption>
 </figure>
 
 <figure>
 
-![stationary web screenshot](https://raw.githubusercontent.com/donsuhr/kata/main/src/devchallenges.io/02_my-team-page/img/localhost_8080_devchallenges.io_02_my-team-page_SW.png)
+![stationary web screenshot](https://raw.githubusercontent.com/donsuhr/kata/main/src/devchallenges.io/02_my-team-page/src/img/localhost_8080_devchallenges.io_02_my-team-page_SW.png)
 
 <figcaption>Stationary Web Screenshot</figcaption>
 </figure>

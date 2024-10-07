@@ -1,8 +1,15 @@
 {
   "name": "kata",
   "version": "1.0.0",
-  "description": "",
+  "description": "collection of front-end kata solutions",
+  "license": "ISC",
+  "author": "Don Suhr <kata@donsuhr.com> (http://donsuhr.com/)",
   "type": "module",
+  "workspaces": [
+    "src/advent_2021/*",
+    "src/devchallenges.io/*",
+    "src/miscellaneous/*"
+  ],
   "scripts": {
     "build": "NODE_ENV=production npm-run-all --serial clean build:html build:workspaces && node ./scripts/build--copy-workspace-dist.mjs",
     "build:workspaces": "npm run build --workspaces",
@@ -16,12 +23,10 @@
     "lint:types": "tsc  --noEmit",
     "start": "npm run clean && eleventy --serve"
   },
-  "author": "Don Suhr <kata@donsuhr.com> (http://donsuhr.com/)",
-  "license": "ISC",
-  "workspaces": [
-    "src/advent_2021/*",
-    "src/devchallenges.io/*"
-  ],
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@babel/cli": "^7.25.6",
@@ -73,9 +78,5 @@
     "typescript": "^5.5.4",
     "vite": "^5.4.2",
     "vitest": "^2.0.5"
-  },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
   }
 }

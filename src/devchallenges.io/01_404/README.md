@@ -22,9 +22,9 @@
 
 ## Overview
 
-![mobile web screenshot](https://raw.githubusercontent.com/donsuhr/kata/main/src/devchallenges.io/01_404/img/screenshot-devchallenges.io_01_404-MW.png)
+![mobile web screenshot](https://raw.githubusercontent.com/donsuhr/kata/main/src/devchallenges.io/01_404/src/img/screenshot-devchallenges.io_01_404-MW.png)
 
-![stationary web screenshot](https://raw.githubusercontent.com/donsuhr/kata/main/src/devchallenges.io/01_404/img/screenshot-devchallenges.io_01_404-SW.png)
+![stationary web screenshot](https://raw.githubusercontent.com/donsuhr/kata/main/src/devchallenges.io/01_404/src/img/screenshot-devchallenges.io_01_404-SW.png)
 
 ## Built With
 

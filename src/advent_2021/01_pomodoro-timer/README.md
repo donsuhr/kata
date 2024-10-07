@@ -21,7 +21,7 @@
 
 <figure>
 
-![mobile web screenshot](https://raw.githubusercontent.com/donsuhr/kata/main/src/advent_2021/01_pomodoro-timer/images/screenShot.png)
+![mobile web screenshot](https://raw.githubusercontent.com/donsuhr/kata/main/src/advent_2021/01_pomodoro-timer/src/images/screenShot.png)
 
 <figcaption>Screenshot</figcaption>
 </figure>
